@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: key-sso
+  labels:
+    app: key-sso
+spec:
+  selector:
+    app: key-sso
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+    - name: jgroups
+      protocol: TCP
+      port: 7600
+      targetPort: 7600
+  type: LoadBalancer
