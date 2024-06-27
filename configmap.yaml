@@ -4,5 +4,6 @@ metadata:
   name: keycloak-config
   namespace: development
 data:
-  KEYCLOAK_ADMIN: admin
-  KEYCLOAK_ADMIN_PASSWORD: admin
+  PROXY_ADDRESS_FORWARDING: "true"
+  KEYCLOAK_FRONTEND_URL: "https://localhost/auth/"
+  KEYCLOAK_ADMIN_URL: "https://localhost/auth/realms/master/admin/"
